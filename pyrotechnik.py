@@ -38,6 +38,8 @@ def changer():
     canvas.itemconfig(t, text=ftime)
     if status == True:
         canvas.after(100, changer)
+    if ftime == 0:
+        canvas.delete("all")
 
 h, w = 200, 500
 canvas = tk.Canvas(win, height=h, width=w, bg="white")
